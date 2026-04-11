@@ -9,11 +9,11 @@ app.get('/', (req, res) => {
     res.send('Backend SW OK');
 });
 
-app.get('/data/person', async (req, res) => {
-    const response = await fetch('https://swapi.info/api/people');
-    const swPersonData = await response.json();
+app.get('/data/all', async (req, res) => {
+    const response = await fetch('https://akabab.github.io/starwars-api/api/all.json');
+    const swAllData = await response.json();
 
-    res.json(swPersonData)
+    res.json(swAllData)
 });
 
 app.listen(3001, () => {
